@@ -1,6 +1,11 @@
 import requests
 import json
-SUBSCRIPTION_KEY = 'af0caa16566149bbaecf6faa8f80ca85'
+from dotenv import load_dotenv
+load_dotenv()
+
+import os
+#update key
+SUBSCRIPTION_KEY = os.environ.get('SUBSCRIPTION_KEY')
 
 endpoint = 'https://python-image-analyzer-elub.cognitiveservices.azure.com/'
 request_url = 'https://{endpoint}/vision/v3.2/analyze'
